@@ -2,6 +2,8 @@
 
 Este sistema simula uma aplicação de pedidos (orders) com múltiplos produtores (`OrderTakers`) e consumidores (`OrderHandlers`), usando uma fila compartilhada (`OrderQueue`). O objetivo é demonstrar a concorrência, sincronização e comunicação entre threads.
 
+---
+
 A classe `Order` representa uma order. Cada order vai possuir um ID único, atribuído pela `OrderQueue`.
 
 ``` java
@@ -21,6 +23,7 @@ public class Order {
     }
 } 
 ```
+---
 
 A classe `OrderQueue` é a fila compartilhada onde os `OrderTakers` adicionam orders e os `OrderHandlers` removem orders.
 
@@ -58,6 +61,8 @@ public class OrderQueue {
 
 2. `removeOrder` espera `wait()` se a lista estiver vazia. Caso contrário, remove a primeira order da lista, notifica todas as threads que estão à espera e retorna a order removida.
 
+---
+
 A classe `OrderTaker` é um produtor que cria orders e as adiciona à `OrderQueue`.
 
 ``` java
@@ -89,6 +94,8 @@ public class OrderTaker implements Runnable {
 
 Esta classe cria uma nova order, adiciona-a à fila e imprime o ID da order. Em seguida, a thread dorme por 500ms antes de criar a próxima order.
 
+---
+
 A classe `OrderHandler` é um consumidor que remove orders da `OrderQueue` e processa-as.
 
 ``` java
@@ -117,6 +124,8 @@ public class OrderHandler implements Runnable   {
 
 Esta classe remove uma order da fila, imprime o ID da order e depois dorme por 500ms antes de processar a próxima order.
 
+---
+
 A classe `Main` é o ponto de entrada do programa, onde criamos a `OrderQueue`, os `OrderTakers` e os `OrderHandlers`, e iniciamos as threads.
 
 ``` java
@@ -144,10 +153,14 @@ public class Main {
 
 Nesta classe, criamos uma fila compartilhada `OrderQueue`, iniciamos um número específico de `OrderTakers` e `OrderHandlers`, e cada um deles é executado numa thread separada. O programa continuará a executar indefinidamente, com os OrderTakers criando orders e os OrderHandlers processando-as.
 
+---
+
 ### Fluxo do sistema:
 1. Os `OrderTakers` criam orders e as adicionam à OrderQueue.
 2. Os `OrderHandlers` removem orders da OrderQueue e as processam.
 3. A sincronização é garantida pela utilização de `synchronized`, `wait()` e `notifyAll()` na classe `OrderQueue`, evitando condições de corrida e garantindo que os produtores e consumidores operem de forma coordenada.
+
+---
 
 ### Nota:
 
