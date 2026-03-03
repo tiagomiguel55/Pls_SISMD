@@ -1,6 +1,6 @@
 # Documentação do Assignment 1 - Sistema de Orders com Múltiplos Produtores e Consumidores
 
-Este sistema simula uma aplicação de pedidos (orders) com múltiplos produtores (`Order Takers`) e consumidores (`OrderHGandlers`), usando uma fila compartilhada (`OrderQueue`). O objetivo é demonstrar a concorrência, sincronização e comunicação entre threads.
+Este sistema simula uma aplicação de pedidos (orders) com múltiplos produtores (`OrderTakers`) e consumidores (`OrderHGandlers`), usando uma fila compartilhada (`OrderQueue`). O objetivo é demonstrar a concorrência, sincronização e comunicação entre threads.
 
 A classe `Order` representa uma order. Cada order vai possuir um ID único, atribuído pela `OrderQueue`.
 
