@@ -1,6 +1,6 @@
-package Assignment3_V2;
+package Assignment3_with_synchronized;
 
-import Assignment3.Account;
+import Assignment3_with_trylock.Account;
 
 public class Bank2 {
 

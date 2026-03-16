@@ -1,6 +1,4 @@
-package Assignment3;
-
-import Assignment3_V2.Bank2;
+package Assignment3_with_trylock;
 
 public class User implements Runnable{
 

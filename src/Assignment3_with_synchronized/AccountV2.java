@@ -1,6 +1,4 @@
-package Assignment3_V2;
-
-import java.util.concurrent.locks.ReentrantLock;
+package Assignment3_with_synchronized;
 
 public class AccountV2 {
 

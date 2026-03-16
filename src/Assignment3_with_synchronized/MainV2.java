@@ -1,7 +1,7 @@
-package Assignment3_V2;
+package Assignment3_with_synchronized;
 
-import Assignment3.Account;
-import Assignment3.User;
+import Assignment3_with_trylock.Account;
+import Assignment3_with_trylock.User;
 
 public class MainV2 {
 

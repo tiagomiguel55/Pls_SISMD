@@ -1,4 +1,4 @@
-package Assignment3;
+package Assignment3_with_trylock;
 
 import java.util.concurrent.locks.ReentrantLock;
 

@@ -1,7 +1,4 @@
-package Assignment3;
-
-import Assignment3.Account;
-import Assignment3.User;
+package Assignment3_with_trylock;
 
 public class Main {
 
