@@ -1,11 +1,11 @@
-package Assignment4_V2;
+package Assignment4_;
 
-public class PartialSumV2 implements Runnable {
+public class PartialSum implements Runnable {
     private final int from;
     private final int to;
     private int[] vec;
 
-    PartialSumV2(int _from, int _to, int[] vec) {
+    PartialSum(int _from, int _to, int[] vec) {
         this.from = _from;
         this.to = _to;
     }
